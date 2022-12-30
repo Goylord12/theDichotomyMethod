@@ -41,13 +41,6 @@ public class DhtController {
     @FXML
     private TextField accuracyTXT;
 
-    private Integer intFromBox(TextField str) {
-        return Integer.valueOf(str.getText());
-    }
-    private Double doubleFromBox(TextField str) {
-        return Double.valueOf(str.getText());
-    }
-
     public void getResultDht() {
         if (firstNum.getText().matches(regexp) && secondNum.getText().matches(regexp)
                 && thirdNum.getText().matches(regexp) && !(Objects.equals(thirdNum.getText(), "0"))
@@ -96,7 +89,7 @@ public class DhtController {
         else{
             resultList.add((double)variants);
         }
-        return resultList;
+       
     }
     public void getHelp(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("C:\\Games\\gg\\src\\main\\resources\\com\\example\\gg\\help.fxml")));

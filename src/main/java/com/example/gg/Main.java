@@ -17,10 +17,16 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dht.fxml")));
-        primaryStage.setTitle("Ввод значений уравнения");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        try{
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("dht.fxml")));
+            primaryStage.setTitle("Ввод значений уравнения");
+            primaryStage.setScene(new Scene(root));
+            primaryStage.show();
+        }
+        catch(ex Exception){
+            ex.messageShow;
+        }
+        
     }
 
     public static void main(String[] args) {

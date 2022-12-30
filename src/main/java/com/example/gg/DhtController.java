@@ -62,6 +62,7 @@ public class DhtController {
 
     }
 
+    // Высчитывание корней
     private static List<Double> calculation(int a, int b, int c, int d, double up, double down, double accuracy) {
         List<Double> resultList = new ArrayList<>();
         int variants = 0;
@@ -91,6 +92,7 @@ public class DhtController {
         }
        
     }
+    //получение помощи
     public void getHelp(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("C:\\Games\\gg\\src\\main\\resources\\com\\example\\gg\\help.fxml")));
         root.setId("pane");
